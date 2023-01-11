@@ -1,13 +1,13 @@
 name: auto-release
 on:
-  push:
   pull_request:
 
 jobs:
   autorelease:
     runs-on: ubuntu-latest
+    permissions:
+      pull-requests: write
     steps:
-
       - name: auto-release
         uses: alecsammon/gh-action-auto-release@initial
         with:
