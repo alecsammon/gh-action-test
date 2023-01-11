@@ -4,11 +4,11 @@ on:
   pull_request:
 
 jobs:
-  golangci:
+  autorelease:
     runs-on: ubuntu-latest
     steps:
 
       - name: auto-release
-        uses: alecsammon/gh-action-auto-release@v0.1.0
+        uses: alecsammon/gh-action-auto-release@initial
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
